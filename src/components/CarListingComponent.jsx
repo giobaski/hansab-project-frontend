@@ -102,16 +102,16 @@ class CarListingComponent extends Component {
 
 
     retrieveAllUsersFromApi(){
-        return axios.get("http://localhost:8080/api/users")
+        return axios.get("https://hansab-cars-api.herokuapp.com/api/users")
             .then(response => this.setState({
                 users: response.data
             }))
             .catch()
         
     }
-
+    
     retrieveAllCarsFromApi(){
-        return axios.get("http://localhost:8080/api/cars")
+        return axios.get("https://hansab-cars-api.herokuapp.com/api/cars")
             .then(response => this.setState({
                 cars: response.data
             }))
@@ -121,7 +121,7 @@ class CarListingComponent extends Component {
 
     
     retrieveUserById(id){
-        return axios.get("http://localhost:8080/api/users/" + id)
+        return axios.get("https://hansab-cars-api.herokuapp.com/api/users/" + id)
             .then(response => this.setState(
                     {
                     cars: response.data.cars,
